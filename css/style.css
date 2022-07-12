@@ -23,7 +23,7 @@ main > section {
 
 nav,
 section,
-footer > .container {
+footer {
   padding: 30px 15%;
   justify-content: space-between;
 }
@@ -53,14 +53,10 @@ footer {
   background-color: black;
 }
 
-footer .column,
-.box.text {
+.column {
   flex-direction: column;
 }
-.container {
-  flex-direction: row;
-  gap: 7%;
-}
+
 .grow {
   flex-grow: 1;
 }
@@ -73,8 +69,16 @@ footer .column,
 /***** /setting box container ******/
 
 /***** Content ******/
-.box.text {
+.box {
   justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url(../img/jumbo.png);
+  background-size: cover;
+}
+#large-image {
+  width: 1200px;
 }
 
 /***** /Content ******/
@@ -86,19 +90,15 @@ footer .column,
 header {
   color: white;
 }
-header {
-  background-image: url(../img/jumbo.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  justify-content: center;
-  align-items: center;
-}
 
 section:nth-of-type(2n + 0) {
   background-color: hsl(0deg 0% 96%);
   flex-direction: row-reverse;
 }
+
+#just-chillin {
+  flex-direction: column;
+} /* per conflitto di priorità attribuisco flex-direction all'id */
 
 a {
   text-decoration: none;
@@ -129,6 +129,10 @@ footer h3 {
 /* /setting color and text */
 
 /* botton setting */
+
+.button > * {
+  margin: 10px 10px;
+}
 
 /* /botton setting */
 
