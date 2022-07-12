@@ -14,7 +14,6 @@
 /***** setting box container ******/
 
 .flex,
-.container,
 main > section {
   display: flex;
 }
@@ -35,9 +34,14 @@ aside {
   margin: auto;
   padding-bottom: 50px;
 }
-#just-chillin {
+#just-chillin,
+.button {
   justify-content: center;
 }
+.button > * {
+  margin: 10px 10px;
+}
+
 section {
   gap: 10px;
 }
@@ -49,9 +53,9 @@ footer {
   background-color: black;
 }
 
-footer .column {
+footer .column,
+.box.text {
   flex-direction: column;
-  align-items: flex-start;
 }
 .container {
   flex-direction: row;
@@ -69,10 +73,8 @@ footer .column {
 /***** /setting box container ******/
 
 /***** Content ******/
-.box {
-  height: 300px;
-  flex-basis: calc((100vw - 30%) / 2 - 5px);
-  background-color: rgb(15, 17, 17);
+.box.text {
+  justify-content: center;
 }
 
 /***** /Content ******/
@@ -81,19 +83,30 @@ footer .column {
 
 /* setting color and text */
 
-body {
+header {
   color: white;
 }
-
-section:nth-of-type(2n + 1) {
-  background-color: rgba(130, 230, 160, 0.425);
-}
 header {
-  background-color: rgb(255, 0, 0);
+  background-image: url(../img/jumbo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
 }
+
+section:nth-of-type(2n + 0) {
+  background-color: hsl(0deg 0% 96%);
+  flex-direction: row-reverse;
+}
+
 a {
   text-decoration: none;
   color: white;
+}
+nav a {
+  font-weight: 600;
+  text-align: center;
 }
 
 ul {
@@ -114,5 +127,9 @@ footer h3 {
   font-size: 2em;
 }
 /* /setting color and text */
+
+/* botton setting */
+
+/* /botton setting */
 
 /***** /Utilities *****/
